@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.jogli.bootcamp.creatures'
+version = '1.0.0'
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'com.jogli.bootcamp.creatures.Main'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs = ['-Xlint:-options']
+}
+
+task runExamples(type: JavaExec) {
+    group = 'application'
+    description = 'Creatures Game'
+    mainClass = 'com.jogli.bootcamp.creatures.Main'
+    classpath = sourceSets.main.runtimeClasspath
+} 

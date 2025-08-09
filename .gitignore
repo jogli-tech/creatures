@@ -1,0 +1,27 @@
+.DS_Store
+*.idea
+*.iml
+*.swp
+target/
+.settings
+.classpath
+.project
+
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+bin/
+build/
+!src/**/build/
+gradle/
+gradlew
+gradlew.bat
+
+#i18n po & pot files
+i18n/*.po
+i18n/*.pot
+i18n/i18ngettext/*.class
+lib/i18ngettext/
+
+!/lib/i18ngettext.jar
+*.po
+*.pot
